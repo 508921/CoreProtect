@@ -20,7 +20,7 @@ jobs:
           distribution: 'temurin'
           cache: 'maven'
       - name: Build (package)
-        run: mvn -B -DskipTests package
+        run: mvn -B -Dproject.branch=development -DskipTests package
 
       - name: Show produced JARs (for debug)
         run: find . -name "*.jar" -print
